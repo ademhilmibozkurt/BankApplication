@@ -1,0 +1,53 @@
+﻿<!-- 0@model User -->
+
+<!-- instead -->
+@model UserModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- work on page rows, mt-4: margin top 4 unit -->
+<div class="row mt-4">
+
+    <!-- divide page on x axis, col-6: left 6 unit column -->
+    <div class="col-6">
+        <h3> Hesap Sahibi Bilgileri</h3>
+
+        <!-- user information getter -->
+        <p> İsim: @Model.FirstName </p>
+        <p> Soyisim: @Model.LastName </p>
+
+        <!-- account count getter-->
+        <p> Aktif Hesap Sayısı: <getAccountCount user-id="@Model.Id"></getAccountCount> </p>
+    </div>
+
+    <!-- right 6 column -->
+    <div class="col-6">
+
+        <!-- post to create action -->
+        <form method="post" asp-action="Create" asp-controller="Account">
+            <input type="hidden" name="=UserId" value="@Model.Id"/>
+
+            <!-- account number setter -->
+            <div class="mb-3">
+                <label class="form-label"> Hesap Numarası: </label>
+                <input class="form-control" type="number" name="AccountNumber" />
+            </div>
+
+            <!-- balance info setter -->
+            <div class="mb-3">
+                <label class="form-label"> Bakiye: </label>
+                <input class="form-control" type="number" name="Balance" />
+            </div>
+
+            <!-- save button -->
+            <div class="mb-3">
+                <button class="btn btn-primary"> Kaydet </button>
+            </div>
+            
+        </form>
+
+    </div>
+
+</div>

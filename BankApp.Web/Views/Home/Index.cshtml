@@ -1,0 +1,45 @@
+﻿<! –– take a list of users. (!) dont use ––>
+<!-- 0@model List<User> -->
+
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!-- instead -->
+@model List<UserModel>
+
+@{
+    Layout= "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- create a html table -->
+<table class="mt-4 table table-hover table-bordered table-sm">
+    <!-- head of table(top) -->
+    <thead>
+        <tr>
+            <!-- table head titles -->
+            <td>İsim</td>
+            <td>Soyisim</td>
+            <td>Hesap Sayısı</td>
+            <td></td>
+        </tr>
+    </thead>
+
+    <!-- body of table -->
+    <tbody>
+        <!-- list of users -->
+        @foreach(var item in Model)
+        {
+            <tr>
+                <!-- user information getter -->
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td> <getAccountCount user-id="@item.Id"></getAccountCount> </td>
+
+                <!-- director for account creation page-->
+                <td><a asp-action="Create" asp-controller="Account" asp-route-id="@item.Id"> Yeni Hesap Oluştur </a></td>
+                <td><a asp-action="GetByUserId" asp-controller="Account" asp-route-userId="@item.Id"> Hesaplar </a></td>
+
+            </tr>
+        }
+        
+    </tbody>
+</table>

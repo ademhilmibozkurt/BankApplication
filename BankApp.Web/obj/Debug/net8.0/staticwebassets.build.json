@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "J7rFUXarDZKGKHuyuNWDXeKxcOGZyspuTADNCxJsmSM=",
+  "Source": "BankApp.Web",
+  "BasePath": "_content/BankApp.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BankApp.Web\\wwwroot",
+      "Source": "BankApp.Web",
+      "ContentRoot": "D:\\projects\\C#\\Asp.NetCore\\BankApplication\\BankApp.Web\\wwwroot\\",
+      "BasePath": "_content/BankApp.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\projects\\C#\\Asp.NetCore\\BankApplication\\BankApp.Web\\wwwroot\\style.css",
+      "SourceId": "BankApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\C#\\Asp.NetCore\\BankApplication\\BankApp.Web\\wwwroot\\",
+      "BasePath": "_content/BankApp.Web",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}

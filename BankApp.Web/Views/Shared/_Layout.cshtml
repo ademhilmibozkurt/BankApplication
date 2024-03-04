@@ -1,0 +1,19 @@
+﻿<!-- This file use for base of View files. All Views that take Layout parameter shows _Layout.cshtml page -->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <!-- include bootstrap, css files -->
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container lead">
+        @RenderBody()
+    </div>
+</body>
+</html>

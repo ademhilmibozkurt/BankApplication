@@ -1,0 +1,39 @@
+﻿<!-- import tag helper -->
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!-- import SelectList of model-->
+@model SelectList
+
+<!-- import layout -->
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- div field. margin top 3 -->
+<div class="mt-3">
+
+    <!-- create a form field. redirects to SendMoney method in AccountController. Call post method -->
+    <form asp-action="SendMoney" method="post" class="w-75 mx-auto">
+        <input type="hidden" name="SenderId" value="@ViewBag.SenderId" />
+
+        <div class="mb-3">
+            <label> Para gönderilecek hesap numarası: </label>
+            <!-- need to set name column for model binding-->
+            <select class="form-select" mame="AccountId" asp-items="@Model">
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label> Gönderilecek tutar: </label>
+            <input type="number" name="Amount" class="form-control" />
+        </div>
+
+        <!-- create a button. margin bottom 3 -->
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary"> Gönder </button>
+        </div>
+
+    </form>
+
+</div>
+

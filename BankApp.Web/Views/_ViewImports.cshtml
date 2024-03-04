@@ -1,0 +1,9 @@
+﻿<!-- This file uses all Views. Allow to use libraries and tag helpers without write in all views -->
+
+<!-- use tag helpers -->
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelper
+@addTagHelper BankApp.Web.TagHelpers.*,BankApp.Web
+
+<!-- sign using for other view files that implements viewimport -->
+@using BankApp.Web.Data.Entities
+@using BankApp.Web.Models
